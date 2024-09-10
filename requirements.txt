@@ -12,4 +12,4 @@ jupyter
 ultralytics
 transformers
 simple-pid
-sklearn
+scikit-learn

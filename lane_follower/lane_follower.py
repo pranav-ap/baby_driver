@@ -6,9 +6,9 @@ from .blue_utils import *
 class LaneFollowerClassic:
     def __init__(self) -> None:
         open_path = (
-            "./../camera_cal/calibration*.jpg"
+            "D:/tum_baby_driver/camera_cal/calibration*.jpg"
         )
-        save_path = "./../camera_cal/"
+        save_path = r"D:/tum_baby_driver/camera_cal/"
         chessboard_size = [9, 6]
         self.objpoints = []
         self.imgpoints = []
@@ -17,8 +17,9 @@ class LaneFollowerClassic:
         )
 
         calib3_img = mpimg.imread(
-            r"./../camera_cal/calibration1.jpg"
+            r"D:/tum_baby_driver/camera_cal/calibration1.jpg"
         )
+
         calib3_und_img = undistort_img(calib3_img, self.objpoints, self.imgpoints)
 
     def predict(self, original_center):

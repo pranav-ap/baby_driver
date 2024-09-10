@@ -65,6 +65,8 @@ def thread_fun(data):
         or current_color == "red"
     )
 
+    # print(f"need_to_stop {need_to_stop}")
+
     if not need_to_stop and random.random() < 0.5:
         global steer_angle
 
@@ -140,7 +142,7 @@ def vehicle_command(sid, data):
         if speed > speed_limit:
             throttle = 0
 
-        # print("Send to Unity : TBS ", throttle, brake, steer_angle)
+        print("Send to Unity : TBS ", throttle, brake, steer_angle)
         send_control(steer_angle, throttle, brake)
 
 
